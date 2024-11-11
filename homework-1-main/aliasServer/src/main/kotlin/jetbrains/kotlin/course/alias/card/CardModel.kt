@@ -9,7 +9,6 @@ data class Word(
     val word: String,
     val definition: String? = null,
     val synonyms: List<String> = emptyList()
-    j
 )
 
 
