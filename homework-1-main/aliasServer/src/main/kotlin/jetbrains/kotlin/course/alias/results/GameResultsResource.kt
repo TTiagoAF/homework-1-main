@@ -17,22 +17,6 @@ class GameResultsResource(val service: GameResultsService) {
     @GetMapping("/all")
     fun getAllGameResults() = service.getAllGameResults()
 }
-data class GameResult(
-    val id: Int,
-    val playerName: String,
-    val score: Int,
-    val date: String
-)
 
-data class Team(
-    val id: Int,
-    var points: Int,
-    val name: String,
-    val members: List<String>
-)
-
-object TeamService {
-    val teamsStorage: MutableMap<Int, Team> = mutableMapOf()
-}
 
 

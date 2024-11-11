@@ -1,14 +1,7 @@
 package jetbrains.kotlin.course.alias.team
 
-data class Team(
-    val id: Int,
-    var points: Int,
-    val name: String,
-    val members: List<String>
-)
+import jetbrains.kotlin.course.alias.util.Identifier
 
-data class JsTeam(
-    val id: Int,
-    val points: Int,
-    val name: String
-)
+data class Team(val id: Identifier, var points: Int = 0, var name: String = "Team#${id + 1}") {
+
+}
